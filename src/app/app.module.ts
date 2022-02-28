@@ -14,7 +14,7 @@ import { PeliculaComponent } from "./components/pelicula/pelicula.component";
 import { TarjetasComponent } from "./components/tarjetas/tarjetas.component";
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { PeliculaImagenPipe } from './pipes/pelicula-imagen.pipe';
-
+import { CarrousellComponent } from './components/carrousell/carrousell.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +24,8 @@ import { PeliculaImagenPipe } from './pipes/pelicula-imagen.pipe';
     PeliculaComponent,
     TarjetasComponent,
     NavbarComponent,
-    PeliculaImagenPipe
+    PeliculaImagenPipe,
+    CarrousellComponent
   ],
   imports: [
     BrowserModule,

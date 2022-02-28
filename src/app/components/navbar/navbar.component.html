@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+<nav class="navbar navbar-expand-md navbar-dark bg-primary">
   <a class="navbar-brand" href="#">
     <img src="assets/img/banner-ico.png" width="30" height="30" alt="" />
     MovieDB-API
@@ -9,13 +9,9 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" routerLink="home">Home</a>
-      </li>
-      <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" routerLink="search">Search</a>
-      </li>
-    </ul>
+
   </div>
+  <form class="d-flex">
+     <button class="btn btn-success rounded-pill" routerLink="search" style="color:black;">Buscar</button>
+  </form>
 </nav>

@@ -20,24 +20,24 @@ export class PeliculaComponent {
     this.loadingPelicula = true;
 
     this.router.params.subscribe(params => {
-      console.log(params);
+     // console.log(params);
 
       this.moviedb.getPelicula(params['id'])
         .subscribe(pelicula => {
-          console.log(pelicula);
+         // console.log(pelicula);
           this.pelicula = pelicula;
           this.loadingPelicula = false;
         })
     })
 
   }
-  /* 
+
     getPelicula(id: string) {
-  
+
       this.loadingPelicula = true;
-  
-      this.moviedb.getPelicula( parametros['id'])
-    } */
+  /*
+      this.moviedb.getPelicula( parametros['id'])*/
+    }
 
 
 }

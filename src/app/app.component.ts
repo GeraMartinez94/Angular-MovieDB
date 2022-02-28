@@ -8,8 +8,14 @@ import { MoviedbService } from "./services/moviedb.service";
 })
 export class AppComponent {
   title = "Angular-MovieDB-API";
-
+  showMe: boolean=false;
   constructor(public _ms: MoviedbService) {
     this._ms.getDiscoverMovies().subscribe(data => console.log(data));
+    this.showMe=!this.showMe
+  }
+
+  toggleTag(){
+
+    this.showMe =!this.showMe;
   }
 }

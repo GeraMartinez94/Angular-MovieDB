@@ -1,13 +1,20 @@
-<div class="card-columns m-5 animated fadeIn">
+
+<div class="card-columns mt-1 animated">
   <div (click)="verPelicula(item)" *ngFor="let item of items" class="card puntero">
-    <img class="card-img-top" [src]="item | peliculaImagen" alt="Card image cap" />
-    <div class="card-body">
-      <h5 class="card-title">{{ item.title }}</h5>
-      <p class="card-text">
-        <span *ngFor="let pelicula of item.peliculas" class="badge badge-pill badge-primary">
-          {{ pelicula.name }}
+    <div class="size">
+      <img class="card-img-top" [src]="item | peliculaImagen" alt="" />
+      <div class="card-body">
+        <h5 class="card-title">{{ item.title }}</h5>
+        <span  class=" translate-middle badge rounded-pill bg-danger"style=" size:100%;border: radius 30px;">
+          {{ item.vote_average }}
         </span>
-      </p>
+        <hr>
+
+
+      </div>
+      <br/>
     </div>
+
+
   </div>
 </div>

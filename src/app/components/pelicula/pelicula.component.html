@@ -1,27 +1,36 @@
 <app-loading *ngIf="loadingPelicula"></app-loading>
-<div class="container main-container animated fadeIn fast">
+  <div class="container main-container animated fadeIn fast">
 
     <div class="row">
 
         <div class="col-md-5">
-            <img [src]="pelicula | peliculaImagen" [alt]="pelicula.original_title" class="img-thumbnail img-fluid">
+            <img [src]="pelicula | peliculaImagen" [alt]="pelicula.original_title" class="img-thumbnail img-fluid" style="border:solid;">
         </div>
 
 
-        <div class="col-md-7">
-            <h3>Sinopsis</h3>
-            <hr>
+        <div class="col-md-7"style="color:white">
+            <h3>{{ pelicula.title}}</h3>
+            <br>
+            <span  class=" translate-middle badge rounded-pill bg-danger"style="font-size:20px;border: radius 340px;"> {{ pelicula.vote_average }}</span>
+
+          <br>
+          <br>
             <p class="text-justify">
-                {{ pelicula.overview }}
+
+              <span  class=" translate-middle badge rounded-pill bg-danger"style="font-size:20px;border: radius 340px;">
+                {{ pelicula.popularity | number:'1.0-0' }}/10
+              </span>
+
+              
+            </p>
+            <hr>
+            <p class="text-justify"style=" font-size:20px;" >
+                {{ pelicula.overview}}
             </p>
 
-            <p>
-                Popularidad: <span class="badge badge-primary">{{ pelicula.popularity | number:".0-0" }}/10</span>
-                <br>
-                Voto promedio: <span class="badge badge-primary">{{ pelicula.vote_average }}</span>
-            </p>
+           
 
-            <button [routerLink]="['/'+regresarA, busqueda ]" type="button" class="btn btn-outline-danger">
+            <button [routerLink]="['/'+regresarA, busqueda ]" type="button" class="btn btn-success rounded-pill">
                 Regresar
             </button>
 

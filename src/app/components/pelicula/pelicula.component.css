@@ -1,0 +1,8 @@
+.estilo{
+    font-size:.75em;
+    font-weight:$font-weight-bold;
+    color:$white;
+    padding-y:.35em;
+    padding-x:.65em;
+    border-radius:              
+}
